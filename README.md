@@ -32,3 +32,8 @@ simulation with no problems after syntax cleared.
 
 
 ### Datapath Modifications
+
+This was a little bit trickier. We were given the code for the PC which was helpful in understanding what we had to do
+and what each register should look like. I relied heavily on the schematic given to us in the Lab 4 handout to figure 
+out what went where and when something would occur. I followed the same pattern for the IR, MARHi, and MARLo using if and elsif statements. If reset was 0 then the info passed through equaled 0. Otherwise, if the clock was at a rising edge and the respective signals going in were equal to 1, then the corresponding outputs went through. The address 
+selector 
