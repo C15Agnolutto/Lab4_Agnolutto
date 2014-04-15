@@ -1,5 +1,7 @@
 Lab4_Agnolutto
 ==============
+# Design
+
 ### ALU Modifications
 
 ![schem](https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Schematic.JPG)
@@ -50,5 +52,25 @@ The above datapath waveform matches the simulation results provided in the lab 4
 ### Discussion of Datapath Testbench Operation
 
 ![100ns] (https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Datapath100ns.PNG)
+
+Explanation of what is happening is in the table below for each rising edge between 50ns and 100ns. 
+
+| Time  | IR      | Data | Accum | Addr | OpSel | 
+|-------|:-------:| :---:|:-----:|-----:|:-----:|
+| 55ns  | 3 (ROR) | 4    | 0     | 4    | 0     |
+| 65ns  | 3 (ROR) | Z    | 0     | 4    | 3     |
+| 75ns  | 3 (ROR) | 4    | 0     | 4    | 0     |
+| 85ns  | 4 (OUT) | 3    | 0     | 5    | 0     |
+| 95ns  | 4 (OUT) | 3    | 0     | 5    | 0     |
+
+There appears to be a weird error with my Accumulator value. Not sure why this value does not change. Code appears accurate as all other values are matching the correct output. What's supposed to be happening is the value in the accumulator is supposed to go under the ROR operation. This is what is happening between 55ns and 75ns. Then the value is supposed to be out to port 3. 
+
+
+
+
+
+
+
+
 
 
