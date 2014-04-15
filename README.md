@@ -66,6 +66,10 @@ Explanation of what is happening is in the table below for each rising edge betw
 There appears to be a weird error with my Accumulator value. Not sure why this value does not change. Code appears accurate as all other values are matching the correct output. What's supposed to be happening is the value in the accumulator is supposed to go under the ROR operation. This is what is happening between 55ns and 75ns. Then the value is supposed to be out to port 3. 
 
 
+![225ns] (https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Jump.PNG)
+
+The above is a depiction of the jump occuring at 225ns. The Addr is going from 0c to 02 at jmpsel equals 1. 
+
 
 
 
