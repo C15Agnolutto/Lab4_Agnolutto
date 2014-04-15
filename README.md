@@ -77,13 +77,9 @@ telling it to do the jmp command. It then loops through the functions between 0-
 
 ### Simulation Analysis
 
-| Addr  |    Operation   | Operand |  
-|-------|:-------:| :---:|
-|   |  |     | 
-|   |  |     | 
-|   |  |     | 
-|   |  |     | 
-|   |  |     |
+![prism] (https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Prism.PNG)
+
+
 
 
 
