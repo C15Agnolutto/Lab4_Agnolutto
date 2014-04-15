@@ -63,7 +63,7 @@ Explanation of what is happening is in the table below for each rising edge betw
 | 85ns  | 4 (OUT) | 3    | D     | 5    | 0     |
 | 95ns  | 4 (OUT) | 3    | D     | 5    | 0     |
 
-What's happening is the value in the accumulator is going through the ROR operation. This is what is happening between 55ns and 75ns. Then the value is output to port 3. 
+What's happening is the value in the accumulator is going through the ROR operation. This is what is happening between 55ns and 75ns. Then the value is output to port 3. At 50, 60, 70, 80, 90, and 100ns nothing is changing because it is not on a rising edge. 
 
 
 ![225ns] (https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Jump.PNG)
@@ -75,7 +75,7 @@ telling it to do the jmp command. It then loops through the functions between 0-
 
 # Reverse Engineering
 
-### Simulation Analysis
+### PRISM simulation
 
 ![prism] (https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Prism.PNG)
 
