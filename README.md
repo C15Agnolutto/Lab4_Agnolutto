@@ -26,3 +26,9 @@ Above is the ALU simulation results. Yes the ALU works and has the expected resu
 | 390ns  | 110 ADD | 1001  | 0011  | 1100   |
 | 450ns  | 111 LDA | 1011  | 0110  | 1011   |
 
+Not much debugging in this stage. Briefly reviewed how to do cases by looking at Lab 3. Initially put "when'0'" etc instead of "when '000'". Fixed that problem. for the NEG function I added "1" instead of "0001". Both easy fixes. Ran
+simulation with no problems after syntax cleared. 
+
+
+
+### Datapath Modifications
