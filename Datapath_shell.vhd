@@ -68,7 +68,6 @@ architecture Datapath of Datapath is
 		);
 	END COMPONENT;
 
-	
 
 
 	
@@ -172,10 +171,11 @@ begin
 		if (Reset_L ='0') then
 			Accumulator <= "0000";
 		elsif (Clock'event and Clock='1' and AccLd = '1') then
-			Accumulator <= Accumulator;
+			Accumulator <= ALU_Result;
 		end if;
   	end process;     
 	  
+
 	-- Complete the code to implement a tri-state buffer which places the Accumulator data on the 
 	-- Data Bus when enabled and goes to High Z the rest of the time	
 	-- Note: use "Z" just like a bit.  If you want to set a signal to  High Z, you'd say mySignal <= 'Z';
