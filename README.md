@@ -57,18 +57,19 @@ Explanation of what is happening is in the table below for each rising edge betw
 
 | Time  | IR      | Data | Accum | Addr | OpSel | 
 |-------|:-------:| :---:|:-----:|-----:|:-----:|
-| 55ns  | 3 (ROR) | 4    | 0     | 4    | 0     |
-| 65ns  | 3 (ROR) | Z    | 0     | 4    | 3     |
-| 75ns  | 3 (ROR) | 4    | 0     | 4    | 0     |
-| 85ns  | 4 (OUT) | 3    | 0     | 5    | 0     |
-| 95ns  | 4 (OUT) | 3    | 0     | 5    | 0     |
+| 55ns  | 3 (ROR) | 4    | B     | 4    | 0     |
+| 65ns  | 3 (ROR) | Z    | B     | 4    | 3     |
+| 75ns  | 3 (ROR) | 4    | D     | 4    | 0     |
+| 85ns  | 4 (OUT) | 3    | D     | 5    | 0     |
+| 95ns  | 4 (OUT) | 3    | D     | 5    | 0     |
 
-There appears to be a weird error with my Accumulator value. Not sure why this value does not change. Code appears accurate as all other values are matching the correct output. What's supposed to be happening is the value in the accumulator is supposed to go under the ROR operation. This is what is happening between 55ns and 75ns. Then the value is supposed to be out to port 3. 
+What's happening is the value in the accumulator is going through the ROR operation. This is what is happening between 55ns and 75ns. Then the value is output to port 3. 
 
 
 ![225ns] (https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Jump.PNG)
 
-The above is a depiction of the jump occuring at 225ns. The Addr is going from 0c to 02 at jmpsel equals 1. 
+The above is a depiction of the jump occuring at 225ns. The Addr is going from 0c to 02 because the opcode (data) is 
+telling it to do the jmp command. It then loops through the functions between 0-225ns. 
 
 
 
