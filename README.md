@@ -72,7 +72,17 @@ The above is a depiction of the jump occuring at 225ns. The Addr is going from 0
 
 
 
+# Reverse Engineering
 
+### Simulation Analysis
+
+| Addr  |    Operation   | Operand |  
+|-------|:-------:| :---:|
+|   |  |     | 
+|   |  |     | 
+|   |  |     | 
+|   |  |     | 
+|   |  |     |
 
 
 
