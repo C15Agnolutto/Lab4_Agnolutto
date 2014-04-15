@@ -36,4 +36,19 @@ simulation with no problems after syntax cleared.
 This was a little bit trickier. We were given the code for the PC which was helpful in understanding what we had to do
 and what each register should look like. I relied heavily on the schematic given to us in the Lab 4 handout to figure 
 out what went where and when something would occur. I followed the same pattern for the IR, MARHi, and MARLo using if and elsif statements. If reset was 0 then the info passed through equaled 0. Otherwise, if the clock was at a rising edge and the respective signals going in were equal to 1, then the corresponding outputs went through. The address 
-selector 
+selector was slightly different because it was based on the PC and memory registers. If the address select = 0, the PC value went through, if it equaled 1 then the memory registers went through. Slight issue there initially, assigning Addr to MARHi and MARLo as opposed to splitting the Addr value 7 to 4 and 3 to 0 for the MARHi and MARLo values respectively. After that was resolved, I instantiated the ALU. Easy enough. Connected the OpSel, Data,Accumulator and Result to the ALU info in my ALU_shell file. Implementing the Accumulator was not that difficult. It followed the came pattern as those before it. If reset is enable, then 0 goes through, if AccLd is 1 and its on a rising edge then the accumulator value passes through. The last two pieces were implement a tristate buffer and the datapath status signals. Again, using the schematic provided, it was not different to figure out what gets passed through and what it relied on (can be seen in the provided files). 
+
+
+
+### Datapath Test and Debug
+
+![50ns] (https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Datapath50ns.PNG)
+
+The above datapath waveform matches the simulation results provided in the lab 4 handout that we were supposed to compare it to. This did not happen on the first attempt. As stated above, the errors I made caused variations in the simulation results until I finished the debugging. This is the final product that matches the 0-50ns waveform. 
+
+
+### Discussion of Datapath Testbench Operation
+
+![100ns] (https://raw.githubusercontent.com/C15Agnolutto/Lab4_Agnolutto/master/Datapath100ns.PNG)
+
+
